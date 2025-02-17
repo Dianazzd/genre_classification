@@ -9,6 +9,7 @@ import tempfile
 import mlflow
 import pandas as pd
 import numpy as np
+np.object = object
 from mlflow.models import infer_signature
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
@@ -23,7 +24,7 @@ from sklearn.impute import SimpleImputer
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger()
-
+np.object = object
 
 def go(args):
 
